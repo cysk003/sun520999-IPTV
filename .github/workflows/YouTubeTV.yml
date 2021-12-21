@@ -775,6 +775,24 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(youtube-dl -g https://www.youtube.com/channel/UC-q1OwxWpoX4Ywou47xWM_w/live)
+         EOL
+    - name: Get xfy.m3u8 
+      run: |
+        touch ./xfy.m3u8 
+        sudo cat >./xfy.m3u8  <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/channel/UC4H97o1HrRDaQ2aHuzWVMdg/live)
+        EOL
+    - name: Get badu.m3u8 
+      run: |
+        touch ./badu.m3u8 
+        sudo cat >./badu.m3u8  <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(youtube-dl -g https://www.youtube.com/channel/UCX0G0TLANlxVDugOTw-hsNw/live)
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
