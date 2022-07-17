@@ -776,7 +776,7 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(youtube-dl -g https://www.youtube.com/channel/UC-q1OwxWpoX4Ywou47xWM_w/live)
          EOL
-         - name: Get cfjd.m3u8 
+     - name: Get tongshi.m3u8 
       run: |
         touch ./tongshi.m3u8 
         sudo cat >./tongshi.m3u8  <<EOL
